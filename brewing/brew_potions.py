@@ -15,9 +15,24 @@ def make_example_potion(student_name):
     return my_potion
 
 
-def make_python_expert_potion(student_name):
+def make_python_expert_potion(student_name: str) -> potion_class.Potion:
+    """Cook an expert potion.
+    
+    Set up a pewter cauldron and light a fire underneath it.
+    Add fish eyes, unicorn hair and tea leaves.
+    Let simmer for 2 hours.
+
+    Parameters
+    ----------
+    student_name : str 
+        The name of the cook.
+
+    Returns
+    -------
+    expert_potion : class object
+        The cooked expert posion.
+    """
     print("I am a Python Expert")
-    # todo: write this function!
     expert_potion = potion_class.Potion(student_name=student_name)
     expert_potion.setup(container=containers.pewter_cauldron, heat_source=cooking.fire)
     expert_potion.add_ingredients([fish_eyes, unicorn_hair, tea_leaves])
